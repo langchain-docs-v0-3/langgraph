@@ -23,8 +23,6 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     timeout-minutes: 10 # Job will be cancelled if it runs for more than 10 minutes
-    env:
-      GITHUB_TOKEN: ${{ secrets.MKDOCS_GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v5
         with:
@@ -41,11 +39,6 @@ jobs:
         run: |
           yarn
           uv sync --all-groups
-          # we run this installation only for internal PRs
-          # as GITHUB_TOKEN is not available for PRs from outside contributors
-          if [ -n "${GITHUB_TOKEN}" ]; then
-            uv run pip install "git+https://${GITHUB_TOKEN}@github.com/langchain-ai/mkdocs-material-insiders.git"
-          fi
 
       - name: Build llms-text
         run: make llms-text
