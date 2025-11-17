@@ -291,7 +291,7 @@ In this example, we've used the `withLangGraph` function to specify a reducer fu
 #### Why use messages?
 
 :::python
-Most modern LLM providers have a chat model interface that accepts a list of messages as input. LangChain's [`ChatModel`](https://python.langchain.com/docs/concepts/#chat-models) in particular accepts a list of `Message` objects as inputs. These messages come in a variety of forms such as `HumanMessage` (user input) or `AIMessage` (LLM response). To read more about what message objects are, please refer to [this](https://python.langchain.com/docs/concepts/#messages) conceptual guide.
+Most modern LLM providers have a chat model interface that accepts a list of messages as input. LangChain's [`ChatModel`](https://langchain-docs-v0-3.github.io/langchain/docs/concepts/#chat-models) in particular accepts a list of `Message` objects as inputs. These messages come in a variety of forms such as `HumanMessage` (user input) or `AIMessage` (LLM response). To read more about what message objects are, please refer to [this](https://langchain-docs-v0-3.github.io/langchain/docs/concepts/#messages) conceptual guide.
 :::
 
 :::js
@@ -315,7 +315,7 @@ However, you might also want to manually update messages in your graph state (e.
 #### Serialization
 
 :::python
-In addition to keeping track of message IDs, the `add_messages` function will also try to deserialize messages into LangChain `Message` objects whenever a state update is received on the `messages` channel. See more information on LangChain serialization/deserialization [here](https://python.langchain.com/docs/how_to/serialization/). This allows sending graph inputs / state updates in the following format:
+In addition to keeping track of message IDs, the `add_messages` function will also try to deserialize messages into LangChain `Message` objects whenever a state update is received on the `messages` channel. See more information on LangChain serialization/deserialization [here](https://langchain-docs-v0-3.github.io/langchain/docs/how_to/serialization/). This allows sending graph inputs / state updates in the following format:
 
 ```python
 # this is supported
@@ -471,7 +471,7 @@ const builder = new StateGraph(State);
 
 :::
 
-Behind the scenes, functions are converted to [RunnableLambda](https://python.langchain.com/api_reference/core/runnables/langchain_core.runnables.base.RunnableLambda.html)s, which add batch and async support to your function, along with native tracing and debugging.
+Behind the scenes, functions are converted to [RunnableLambda](https://langchain-docs-v0-3.github.io/api_reference/core/runnables/langchain_core.runnables.base.RunnableLambda.html)s, which add batch and async support to your function, along with native tracing and debugging.
 
 If you add a node to a graph without specifying a name, it will be given a default name equivalent to the function name.
 
@@ -768,7 +768,7 @@ graph.addConditionalEdges(START, routingFunction, {
 ## `Send`
 
 :::python
-By default, `Nodes` and `Edges` are defined ahead of time and operate on the same shared state. However, there can be cases where the exact edges are not known ahead of time and/or you may want different versions of `State` to exist at the same time. A common example of this is with [map-reduce](https://langchain-ai.github.io/langgraph/how-tos/map-reduce/) design patterns. In this design pattern, a first node may generate a list of objects, and you may want to apply some other node to all those objects. The number of objects may be unknown ahead of time (meaning the number of edges may not be known) and the input `State` to the downstream `Node` should be different (one for each generated object).
+By default, `Nodes` and `Edges` are defined ahead of time and operate on the same shared state. However, there can be cases where the exact edges are not known ahead of time and/or you may want different versions of `State` to exist at the same time. A common example of this is with [map-reduce](https://langchain-docs-v0-3.github.io/langgraph/how-tos/map-reduce/) design patterns. In this design pattern, a first node may generate a list of objects, and you may want to apply some other node to all those objects. The number of objects may be unknown ahead of time (meaning the number of edges may not be known) and the input `State` to the downstream `Node` should be different (one for each generated object).
 
 To support this design pattern, LangGraph supports returning @[`Send`][Send] objects from conditional edges. `Send` takes two arguments: first is the name of the node, and second is the state to pass to that node.
 
@@ -1064,7 +1064,7 @@ The recursion limit sets the maximum number of [super-steps](#graphs) the graph 
 graph.invoke(inputs, config={"recursion_limit": 5}, context={"llm": "anthropic"})
 ```
 
-Read [this how-to](https://langchain-ai.github.io/langgraph/how-tos/recursion-limit/) to learn more about how the recursion limit works.
+Read [this how-to](https://langchain-docs-v0-3.github.io/langgraph/how-tos/recursion-limit/) to learn more about how the recursion limit works.
 :::
 
 :::js

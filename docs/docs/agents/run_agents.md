@@ -78,7 +78,7 @@ Agent input must be a dictionary with a `messages` key. Supported formats are:
 :::python
 | Format | Example |
 |--------------------|-------------------------------------------------------------------------------------------------------------------------------|
-| String | `{"messages": "Hello"}` — Interpreted as a [HumanMessage](https://python.langchain.com/docs/concepts/messages/#humanmessage) |
+| String | `{"messages": "Hello"}` — Interpreted as a [HumanMessage](https://langchain-docs-v0-3.github.io/langchain/docs/concepts/messages/#humanmessage) |
 | Message dictionary | `{"messages": {"role": "user", "content": "Hello"}}` |
 | List of messages | `{"messages": [{"role": "user", "content": "Hello"}]}` |
 | With custom state | `{"messages": [{"role": "user", "content": "Hello"}], "user_name": "Alice"}` — If using a custom `state_schema` |
@@ -95,7 +95,7 @@ Agent input must be a dictionary with a `messages` key. Supported formats are:
 
 :::python
 Messages are automatically converted into LangChain's internal message format. You can read
-more about [LangChain messages](https://python.langchain.com/docs/concepts/messages/#langchain-messages) in the LangChain documentation.
+more about [LangChain messages](https://langchain-docs-v0-3.github.io/langchain/docs/concepts/messages/#langchain-messages) in the LangChain documentation.
 :::
 
 :::js
@@ -118,7 +118,7 @@ more about [LangChain messages](https://js.langchain.com/docs/concepts/messages/
 !!! note
 
     :::python
-    A string input for `messages` is converted to a [HumanMessage](https://python.langchain.com/docs/concepts/messages/#humanmessage). This behavior differs from the `prompt` parameter in `create_react_agent`, which is interpreted as a [SystemMessage](https://python.langchain.com/docs/concepts/messages/#systemmessage) when passed as a string.
+    A string input for `messages` is converted to a [HumanMessage](https://langchain-docs-v0-3.github.io/langchain/docs/concepts/messages/#humanmessage). This behavior differs from the `prompt` parameter in `create_react_agent`, which is interpreted as a [SystemMessage](https://langchain-docs-v0-3.github.io/langchain/docs/concepts/messages/#systemmessage) when passed as a string.
     :::
 
     :::js
@@ -319,5 +319,5 @@ To control agent execution and avoid infinite loops, set a recursion limit. This
 
 ## Additional Resources
 
-- [Async programming in LangChain](https://python.langchain.com/docs/concepts/async)
+- [Async programming in LangChain](https://langchain-docs-v0-3.github.io/langchain/docs/concepts/async)
   :::

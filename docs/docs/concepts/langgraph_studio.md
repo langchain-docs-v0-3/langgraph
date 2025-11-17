@@ -38,7 +38,7 @@ Graph mode exposes the full feature-set of Studio and is useful when you would l
 
 ### Chat mode
 
-Chat mode is a simpler UI for iterating on and testing chat-specific agents. It is useful for business users and those who want to test overall agent behavior. Chat mode is only supported for graph's whose state includes or extends [`MessagesState`](https://langchain-ai.github.io/langgraph/how-tos/graph-api/#messagesstate).
+Chat mode is a simpler UI for iterating on and testing chat-specific agents. It is useful for business users and those who want to test overall agent behavior. Chat mode is only supported for graph's whose state includes or extends [`MessagesState`](https://langchain-docs-v0-3.github.io/langgraph/how-tos/graph-api/#messagesstate).
 
 ## Learn more
 

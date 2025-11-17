@@ -7,7 +7,7 @@ You can [define your own tools](#define-a-tool) or use [prebuilt tools](#prebuil
 ## Define a tool
 
 :::python
-Define a basic tool with the [@tool](https://python.langchain.com/api_reference/core/tools/langchain_core.tools.convert.tool.html) decorator:
+Define a basic tool with the [@tool](https://langchain-docs-v0-3.github.io/api_reference/core/tools/langchain_core.tools.convert.tool.html) decorator:
 
 ```python
 from langchain_core.tools import tool
@@ -48,7 +48,7 @@ const multiply = tool(
 
 ## Run a tool
 
-Tools conform to the [Runnable interface](https://python.langchain.com/docs/concepts/runnables/), which means you can run a tool using the `invoke` method:
+Tools conform to the [Runnable interface](https://langchain-docs-v0-3.github.io/langchain/docs/concepts/runnables/), which means you can run a tool using the `invoke` method:
 
 :::python
 
@@ -66,7 +66,7 @@ await multiply.invoke({ a: 6, b: 7 }); // returns 42
 
 :::
 
-If the tool is invoked with `type="tool_call"`, it will return a [ToolMessage](https://python.langchain.com/docs/concepts/messages/#toolmessage):
+If the tool is invoked with `type="tool_call"`, it will return a [ToolMessage](https://langchain-docs-v0-3.github.io/langchain/docs/concepts/messages/#toolmessage):
 
 :::python
 
@@ -369,7 +369,7 @@ To execute tools in custom workflows, use the prebuilt @[`ToolNode`][ToolNode] o
 `ToolNode` operates on [`MessagesState`](../concepts/low_level.md#messagesstate):
 
 - **Input**: `MessagesState`, where the last message is an `AIMessage` containing the `tool_calls` parameter.
-- **Output**: `MessagesState` updated with the resulting [`ToolMessage`](https://python.langchain.com/docs/concepts/messages/#toolmessage) from executed tools.
+- **Output**: `MessagesState` updated with the resulting [`ToolMessage`](https://langchain-docs-v0-3.github.io/langchain/docs/concepts/messages/#toolmessage) from executed tools.
 
 ```python
 # highlight-next-line
@@ -1017,7 +1017,7 @@ Tools within LangGraph sometimes require context data, such as runtime-only argu
 ### Configuration
 
 :::python
-Use configuration when you have **immutable** runtime data that tools require, such as user identifiers. You pass these arguments via [`RunnableConfig`](https://python.langchain.com/docs/concepts/runnables/#runnableconfig) at invocation and access them in the tool:
+Use configuration when you have **immutable** runtime data that tools require, such as user identifiers. You pass these arguments via [`RunnableConfig`](https://langchain-docs-v0-3.github.io/langchain/docs/concepts/runnables/#runnableconfig) at invocation and access them in the tool:
 
 ```python
 from langchain_core.tools import tool
@@ -2361,7 +2361,7 @@ Please consult the documentation for the specific model you are using to see whi
 Additionally, LangChain supports a wide range of prebuilt tool integrations for interacting with APIs, databases, file systems, web data, and more. These tools extend the functionality of agents and enable rapid development.
 
 :::python
-You can browse the full list of available integrations in the [LangChain integrations directory](https://python.langchain.com/docs/integrations/tools/).
+You can browse the full list of available integrations in the [LangChain integrations directory](https://langchain-docs-v0-3.github.io/langchain/docs/integrations/tools/).
 
 Some commonly used tool categories include:
 

@@ -1725,7 +1725,7 @@ Most LLMs have a maximum supported context window (denominated in tokens). One w
 === "In an agent"
 
     :::python
-    To trim message history in an agent, use @[`pre_model_hook`][create_react_agent] with the [`trim_messages`](https://python.langchain.com/api_reference/core/messages/langchain_core.messages.utils.trim_messages.html) function:
+    To trim message history in an agent, use @[`pre_model_hook`][create_react_agent] with the [`trim_messages`](https://langchain-docs-v0-3.github.io/api_reference/core/messages/langchain_core.messages.utils.trim_messages.html) function:
 
     ```python
     # highlight-next-line
@@ -1792,7 +1792,7 @@ Most LLMs have a maximum supported context window (denominated in tokens). One w
 === "In a workflow"
 
     :::python
-    To trim message history, use the [`trim_messages`](https://python.langchain.com/api_reference/core/messages/langchain_core.messages.utils.trim_messages.html) function:
+    To trim message history, use the [`trim_messages`](https://langchain-docs-v0-3.github.io/api_reference/core/messages/langchain_core.messages.utils.trim_messages.html) function:
 
     ```python
     # highlight-next-line

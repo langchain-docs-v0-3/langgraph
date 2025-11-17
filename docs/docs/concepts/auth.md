@@ -92,7 +92,7 @@ Your [`@auth.authenticate`](../cloud/reference/sdk/python_sdk_ref.md#langgraph_s
 :::
 
 :::js
-Your [`auth.authenticate`](https://langchain-ai.github.io/langgraph/cloud/reference/sdk/js_ts_sdk_ref/#authenticate) handler in LangGraph handles steps 4-6, while your [`auth.on`](https://langchain-ai.github.io/langgraph/cloud/reference/sdk/js_ts_sdk_ref/#on>) handlers implement step 7.
+Your [`auth.authenticate`](https://langchain-docs-v0-3.github.io/langgraph/cloud/reference/sdk/js_ts_sdk_ref/#authenticate) handler in LangGraph handles steps 4-6, while your [`auth.on`](https://langchain-docs-v0-3.github.io/langgraph/cloud/reference/sdk/js_ts_sdk_ref/#on>) handlers implement step 7.
 :::
 
 ## Authentication
@@ -139,11 +139,11 @@ The returned user information is available:
   :::
 
 :::js
-Authentication in LangGraph runs as middleware on every request. Your [`authenticate`](https://langchain-ai.github.io/langgraph/cloud/reference/sdk/js_ts_sdk_ref/#authenticate>) handler receives request information and should:
+Authentication in LangGraph runs as middleware on every request. Your [`authenticate`](https://langchain-docs-v0-3.github.io/langgraph/cloud/reference/sdk/js_ts_sdk_ref/#authenticate>) handler receives request information and should:
 
 1. Validate the credentials
 2. Return user information containing the user's identity and user information if valid
-3. Raise an [HTTPException](https://langchain-ai.github.io/langgraph/cloud/reference/sdk/js_ts_sdk_ref/#class-httpexception>) if invalid
+3. Raise an [HTTPException](https://langchain-docs-v0-3.github.io/langgraph/cloud/reference/sdk/js_ts_sdk_ref/#class-httpexception>) if invalid
 
 ```typescript
 import { Auth, HTTPException } from "@langchain/langgraph-sdk";
@@ -172,7 +172,7 @@ auth.authenticate(async (request) => {
 
 The returned user information is available:
 
-- To your authorization handlers via the `user` property in a [callback handler](https://langchain-ai.github.io/langgraph/cloud/reference/sdk/js_ts_sdk_ref/#on)
+- To your authorization handlers via the `user` property in a [callback handler](https://langchain-docs-v0-3.github.io/langgraph/cloud/reference/sdk/js_ts_sdk_ref/#on)
 - In your application via `config.configurable.langgraph_auth_user`
   :::
 
@@ -192,7 +192,7 @@ The returned user information is available:
     :::
 
     :::js
-    The [`authenticate`](https://langchain-ai.github.io/langgraph/cloud/reference/sdk/js_ts_sdk_ref/#authenticate) handler can accept any of the following parameters:
+    The [`authenticate`](https://langchain-docs-v0-3.github.io/langgraph/cloud/reference/sdk/js_ts_sdk_ref/#authenticate) handler can accept any of the following parameters:
 
     * request (Request): The raw request object
     * body (object): The parsed request body
@@ -311,7 +311,7 @@ async def add_owner(
 :::
 
 :::js
-You can granularly control access by mutating the `value.metadata` object directly and returning a [filter object](#filter-operations) when registering an [`on()`](https://langchain-ai.github.io/langgraph/cloud/reference/sdk/js_ts_sdk_ref/#on) handler.
+You can granularly control access by mutating the `value.metadata` object directly and returning a [filter object](#filter-operations) when registering an [`on()`](https://langchain-docs-v0-3.github.io/langgraph/cloud/reference/sdk/js_ts_sdk_ref/#on) handler.
 
 ```typescript
 import { Auth, HTTPException } from "@langchain/langgraph-sdk/auth";
@@ -771,22 +771,22 @@ Here are all the supported action handlers:
 :::js
 | Resource | Event | Description | Value Type |
 | -------------- | -------------------- | -------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| **Threads** | `threads:create` | Thread creation | [`ThreadsCreate`](https://langchain-ai.github.io/langgraph/cloud/reference/sdk/js_ts_sdk_ref/#threadscreate) |
-| | `threads:read` | Thread retrieval | [`ThreadsRead`](https://langchain-ai.github.io/langgraph/cloud/reference/sdk/js_ts_sdk_ref/#threadsread) |
-| | `threads:update` | Thread updates | [`ThreadsUpdate`](https://langchain-ai.github.io/langgraph/cloud/reference/sdk/js_ts_sdk_ref/#threadsupdate) |
-| | `threads:delete` | Thread deletion | [`ThreadsDelete`](https://langchain-ai.github.io/langgraph/cloud/reference/sdk/js_ts_sdk_ref/#threadsdelete) |
-| | `threads:search` | Listing threads | [`ThreadsSearch`](https://langchain-ai.github.io/langgraph/cloud/reference/sdk/js_ts_sdk_ref/#threadssearch) |
-| | `threads:create_run` | Creating or updating a run | [`RunsCreate`](https://langchain-ai.github.io/langgraph/cloud/reference/sdk/js_ts_sdk_ref/#threadscreate_run) |
-| **Assistants** | `assistants:create` | Assistant creation | [`AssistantsCreate`](https://langchain-ai.github.io/langgraph/cloud/reference/sdk/js_ts_sdk_ref/#assistantscreate) |
-| | `assistants:read` | Assistant retrieval | [`AssistantsRead`](https://langchain-ai.github.io/langgraph/cloud/reference/sdk/js_ts_sdk_ref/#assistantsread) |
-| | `assistants:update` | Assistant updates | [`AssistantsUpdate`](https://langchain-ai.github.io/langgraph/cloud/reference/sdk/js_ts_sdk_ref/#assistantsupdate) |
-| | `assistants:delete` | Assistant deletion | [`AssistantsDelete`](https://langchain-ai.github.io/langgraph/cloud/reference/sdk/js_ts_sdk_ref/#assistantsdelete) |
-| | `assistants:search` | Listing assistants | [`AssistantsSearch`](https://langchain-ai.github.io/langgraph/cloud/reference/sdk/js_ts_sdk_ref/#assistantssearch) |
-| **Crons** | `crons:create` | Cron job creation | [`CronsCreate`](https://langchain-ai.github.io/langgraph/cloud/reference/sdk/js_ts_sdk_ref/#cronscreate) |
-| | `crons:read` | Cron job retrieval | [`CronsRead`](https://langchain-ai.github.io/langgraph/cloud/reference/sdk/js_ts_sdk_ref/#cronsread) |
-| | `crons:update` | Cron job updates | [`CronsUpdate`](https://langchain-ai.github.io/langgraph/cloud/reference/sdk/js_ts_sdk_ref/#cronsupdate) |
-| | `crons:delete` | Cron job deletion | [`CronsDelete`](https://langchain-ai.github.io/langgraph/cloud/reference/sdk/js_ts_sdk_ref/#cronsdelete) |
-| | `crons:search` | Listing cron jobs | [`CronsSearch`](https://langchain-ai.github.io/langgraph/cloud/reference/sdk/js_ts_sdk_ref/#cronssearch) |
+| **Threads** | `threads:create` | Thread creation | [`ThreadsCreate`](https://langchain-docs-v0-3.github.io/langgraph/cloud/reference/sdk/js_ts_sdk_ref/#threadscreate) |
+| | `threads:read` | Thread retrieval | [`ThreadsRead`](https://langchain-docs-v0-3.github.io/langgraph/cloud/reference/sdk/js_ts_sdk_ref/#threadsread) |
+| | `threads:update` | Thread updates | [`ThreadsUpdate`](https://langchain-docs-v0-3.github.io/langgraph/cloud/reference/sdk/js_ts_sdk_ref/#threadsupdate) |
+| | `threads:delete` | Thread deletion | [`ThreadsDelete`](https://langchain-docs-v0-3.github.io/langgraph/cloud/reference/sdk/js_ts_sdk_ref/#threadsdelete) |
+| | `threads:search` | Listing threads | [`ThreadsSearch`](https://langchain-docs-v0-3.github.io/langgraph/cloud/reference/sdk/js_ts_sdk_ref/#threadssearch) |
+| | `threads:create_run` | Creating or updating a run | [`RunsCreate`](https://langchain-docs-v0-3.github.io/langgraph/cloud/reference/sdk/js_ts_sdk_ref/#threadscreate_run) |
+| **Assistants** | `assistants:create` | Assistant creation | [`AssistantsCreate`](https://langchain-docs-v0-3.github.io/langgraph/cloud/reference/sdk/js_ts_sdk_ref/#assistantscreate) |
+| | `assistants:read` | Assistant retrieval | [`AssistantsRead`](https://langchain-docs-v0-3.github.io/langgraph/cloud/reference/sdk/js_ts_sdk_ref/#assistantsread) |
+| | `assistants:update` | Assistant updates | [`AssistantsUpdate`](https://langchain-docs-v0-3.github.io/langgraph/cloud/reference/sdk/js_ts_sdk_ref/#assistantsupdate) |
+| | `assistants:delete` | Assistant deletion | [`AssistantsDelete`](https://langchain-docs-v0-3.github.io/langgraph/cloud/reference/sdk/js_ts_sdk_ref/#assistantsdelete) |
+| | `assistants:search` | Listing assistants | [`AssistantsSearch`](https://langchain-docs-v0-3.github.io/langgraph/cloud/reference/sdk/js_ts_sdk_ref/#assistantssearch) |
+| **Crons** | `crons:create` | Cron job creation | [`CronsCreate`](https://langchain-docs-v0-3.github.io/langgraph/cloud/reference/sdk/js_ts_sdk_ref/#cronscreate) |
+| | `crons:read` | Cron job retrieval | [`CronsRead`](https://langchain-docs-v0-3.github.io/langgraph/cloud/reference/sdk/js_ts_sdk_ref/#cronsread) |
+| | `crons:update` | Cron job updates | [`CronsUpdate`](https://langchain-docs-v0-3.github.io/langgraph/cloud/reference/sdk/js_ts_sdk_ref/#cronsupdate) |
+| | `crons:delete` | Cron job deletion | [`CronsDelete`](https://langchain-docs-v0-3.github.io/langgraph/cloud/reference/sdk/js_ts_sdk_ref/#cronsdelete) |
+| | `crons:search` | Listing cron jobs | [`CronsSearch`](https://langchain-docs-v0-3.github.io/langgraph/cloud/reference/sdk/js_ts_sdk_ref/#cronssearch) |
 :::
 
 ???+ note "About Runs"

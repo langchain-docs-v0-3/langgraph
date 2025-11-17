@@ -1,11 +1,11 @@
 # Models
 
-LangGraph provides built-in support for [LLMs (language models)](https://python.langchain.com/docs/concepts/chat_models/) via the LangChain library. This makes it easy to integrate various LLMs into your agents and workflows.
+LangGraph provides built-in support for [LLMs (language models)](https://langchain-docs-v0-3.github.io/langchain/docs/concepts/chat_models/) via the LangChain library. This makes it easy to integrate various LLMs into your agents and workflows.
 
 ## Initialize a model
 
 :::python
-Use [`init_chat_model`](https://python.langchain.com/docs/how_to/chat_models_universal_init/) to initialize models:
+Use [`init_chat_model`](https://langchain-docs-v0-3.github.io/langchain/docs/how_to/chat_models_universal_init/) to initialize models:
 
 {% include-markdown "../../snippets/chat_model_tabs.md" %}
 :::
@@ -64,7 +64,7 @@ Use model provider classes to initialize models:
 
 ### Instantiate a model directly
 
-If a model provider is not available via `init_chat_model`, you can instantiate the provider's model class directly. The model must implement the [BaseChatModel interface](https://python.langchain.com/api_reference/core/language_models/langchain_core.language_models.chat_models.BaseChatModel.html) and support tool calling:
+If a model provider is not available via `init_chat_model`, you can instantiate the provider's model class directly. The model must implement the [BaseChatModel interface](https://langchain-docs-v0-3.github.io/api_reference/core/language_models/langchain_core.language_models.chat_models.BaseChatModel.html) and support tool calling:
 
 ```python
 # Anthropic is already supported by `init_chat_model`,
@@ -83,7 +83,7 @@ model = ChatAnthropic(
 !!! important "Tool calling support"
 
     If you are building an agent or workflow that requires the model to call external tools, ensure that the underlying
-    language model supports [tool calling](../concepts/tools.md). Compatible models can be found in the [LangChain integrations directory](https://python.langchain.com/docs/integrations/chat/).
+    language model supports [tool calling](../concepts/tools.md). Compatible models can be found in the [LangChain integrations directory](https://langchain-docs-v0-3.github.io/langchain/docs/integrations/chat/).
 
 ## Use in an agent
 
@@ -246,7 +246,7 @@ To disable streaming of the individual LLM tokens, set `disable_streaming=True` 
     )
     ```
 
-Refer to the [API reference](https://python.langchain.com/api_reference/core/language_models/langchain_core.language_models.chat_models.BaseChatModel.html#langchain_core.language_models.chat_models.BaseChatModel.disable_streaming) for more information on `disable_streaming`
+Refer to the [API reference](https://langchain-docs-v0-3.github.io/api_reference/core/language_models/langchain_core.language_models.chat_models.BaseChatModel.html#langchain_core.language_models.chat_models.BaseChatModel.disable_streaming) for more information on `disable_streaming`
 :::
 
 :::js
@@ -297,7 +297,7 @@ You can add a fallback to a different model or a different LLM provider using `m
     )
     ```
 
-See this [guide](https://python.langchain.com/docs/how_to/fallbacks/#fallback-to-better-model) for more information on model fallbacks.
+See this [guide](https://langchain-docs-v0-3.github.io/langchain/docs/how_to/fallbacks/#fallback-to-better-model) for more information on model fallbacks.
 :::
 
 :::js
@@ -341,7 +341,7 @@ model = ChatAnthropic(
 )
 ```
 
-See the LangChain docs for more information on how to [handle rate limiting](https://python.langchain.com/docs/how_to/chat_model_rate_limiting/).
+See the LangChain docs for more information on how to [handle rate limiting](https://langchain-docs-v0-3.github.io/langchain/docs/how_to/chat_model_rate_limiting/).
 :::
 
 ## Bring your own model
@@ -350,7 +350,7 @@ If your desired LLM isn't officially supported by LangChain, consider these opti
 
 :::python
 
-1. **Implement a custom LangChain chat model**: Create a model conforming to the [LangChain chat model interface](https://python.langchain.com/docs/how_to/custom_chat_model/). This enables full compatibility with LangGraph's agents and workflows but requires understanding of the LangChain framework.
+1. **Implement a custom LangChain chat model**: Create a model conforming to the [LangChain chat model interface](https://langchain-docs-v0-3.github.io/langchain/docs/how_to/custom_chat_model/). This enables full compatibility with LangGraph's agents and workflows but requires understanding of the LangChain framework.
 
    :::
 
@@ -367,12 +367,12 @@ If your desired LLM isn't officially supported by LangChain, consider these opti
 
 :::python
 
-- [Multimodal inputs](https://python.langchain.com/docs/how_to/multimodal_inputs/)
-- [Structured outputs](https://python.langchain.com/docs/how_to/structured_output/)
-- [Model integration directory](https://python.langchain.com/docs/integrations/chat/)
-- [Force model to call a specific tool](https://python.langchain.com/docs/how_to/tool_choice/)
-- [All chat model how-to guides](https://python.langchain.com/docs/how_to/#chat-models)
-- [Chat model integrations](https://python.langchain.com/docs/integrations/chat/)
+- [Multimodal inputs](https://langchain-docs-v0-3.github.io/langchain/docs/how_to/multimodal_inputs/)
+- [Structured outputs](https://langchain-docs-v0-3.github.io/langchain/docs/how_to/structured_output/)
+- [Model integration directory](https://langchain-docs-v0-3.github.io/langchain/docs/integrations/chat/)
+- [Force model to call a specific tool](https://langchain-docs-v0-3.github.io/langchain/docs/how_to/tool_choice/)
+- [All chat model how-to guides](https://langchain-docs-v0-3.github.io/langchain/docs/how_to/#chat-models)
+- [Chat model integrations](https://langchain-docs-v0-3.github.io/langchain/docs/integrations/chat/)
 
   :::
 

@@ -5,7 +5,7 @@
 In this tutorial, you will build a supervisor system with two agents — a research and a math expert. By the end of the tutorial you will:
 
 1. Build specialized research and math agents
-2. Build a supervisor for orchestrating them with the prebuilt [`langgraph-supervisor`](https://langchain-ai.github.io/langgraph/agents/multi-agent/#supervisor)
+2. Build a supervisor for orchestrating them with the prebuilt [`langgraph-supervisor`](https://langchain-docs-v0-3.github.io/langgraph/agents/multi-agent/#supervisor)
 3. Build a supervisor from scratch
 4. Implement advanced task delegation
 

@@ -55,7 +55,7 @@ class State(TypedDict):
     extra_field: int
 ```
 
-This state tracks a list of [message](https://python.langchain.com/docs/concepts/messages/) objects, as well as an extra integer field.
+This state tracks a list of [message](https://langchain-docs-v0-3.github.io/langchain/docs/concepts/messages/) objects, as well as an extra integer field.
 :::
 
 :::js
@@ -193,7 +193,7 @@ Note that:
 - We receive the entire state in the invocation result.
 
 :::python
-For convenience, we frequently inspect the content of [message objects](https://python.langchain.com/docs/concepts/messages/) via pretty-print:
+For convenience, we frequently inspect the content of [message objects](https://langchain-docs-v0-3.github.io/langchain/docs/concepts/messages/) via pretty-print:
 
 ```python
 for message in result["messages"]:
@@ -332,7 +332,7 @@ ai: Hello!
 In practice, there are additional considerations for updating lists of messages:
 
 - We may wish to update an existing message in the state.
-- We may want to accept short-hands for [message formats](../concepts/low_level.md#using-messages-in-your-graph), such as [OpenAI format](https://python.langchain.com/docs/concepts/messages/#openai-format).
+- We may want to accept short-hands for [message formats](../concepts/low_level.md#using-messages-in-your-graph), such as [OpenAI format](https://langchain-docs-v0-3.github.io/langchain/docs/concepts/messages/#openai-format).
 
 :::python
 LangGraph includes a built-in reducer `add_messages` that handles these considerations:
@@ -371,7 +371,7 @@ Hi
 Hello!
 ```
 
-This is a versatile representation of state for applications involving [chat models](https://python.langchain.com/docs/concepts/chat_models/). LangGraph includes a pre-built `MessagesState` for convenience, so that we can have:
+This is a versatile representation of state for applications involving [chat models](https://langchain-docs-v0-3.github.io/langchain/docs/concepts/chat_models/). LangGraph includes a pre-built `MessagesState` for convenience, so that we can have:
 
 ```python
 from langgraph.graph import MessagesState
@@ -673,7 +673,7 @@ Output of graph invocation: {"a":"set by node3"}
 
 ### Use Pydantic models for graph state
 
-A [StateGraph](https://langchain-ai.github.io/langgraph/reference/graphs.md#langgraph.graph.StateGraph) accepts a `state_schema` argument on initialization that specifies the "shape" of the state that the nodes in the graph can access and update.
+A [StateGraph](https://langchain-docs-v0-3.github.io/langgraph/reference/graphs.md#langgraph.graph.StateGraph) accepts a `state_schema` argument on initialization that specifies the "shape" of the state that the nodes in the graph can access and update.
 
 In our examples, we typically use a python-native `TypedDict` or [`dataclass`](https://docs.python.org/3/library/dataclasses.html) for `state_schema`, but `state_schema` can be any [type](https://docs.python.org/3/library/stdtypes.html#type-objects).
 
@@ -1346,7 +1346,7 @@ By default, the retry policy retries on any exception except for the following:
 
 Node caching is useful in cases where you want to avoid repeating operations, like when doing something expensive (either in terms of time or cost). LangGraph lets you add individualized caching policies to nodes in a graph.
 
-To configure a cache policy, pass the `cache_policy` parameter to the [add_node](https://langchain-ai.github.io/langgraph/reference/graphs.md#langgraph.graph.state.StateGraph.add_node) function. In the following example, a [`CachePolicy`](https://langchain-ai.github.io/langgraph/reference/types/?h=cachepolicy#langgraph.types.CachePolicy) object is instantiated with a time to live of 120 seconds and the default `key_func` generator. Then it is associated with a node:
+To configure a cache policy, pass the `cache_policy` parameter to the [add_node](https://langchain-docs-v0-3.github.io/langgraph/reference/graphs.md#langgraph.graph.state.StateGraph.add_node) function. In the following example, a [`CachePolicy`](https://langchain-docs-v0-3.github.io/langgraph/reference/types/?h=cachepolicy#langgraph.types.CachePolicy) object is instantiated with a time to live of 120 seconds and the default `key_func` generator. Then it is associated with a node:
 
 ```python
 from langgraph.types import CachePolicy
@@ -1659,11 +1659,11 @@ Note that:
 
 ## Create branches
 
-Parallel execution of nodes is essential to speed up overall graph operation. LangGraph offers native support for parallel execution of nodes, which can significantly enhance the performance of graph-based workflows. This parallelization is achieved through fan-out and fan-in mechanisms, utilizing both standard edges and [conditional_edges](https://langchain-ai.github.io/langgraph/reference/graphs.md#langgraph.graph.MessageGraph.add_conditional_edges). Below are some examples showing how to add create branching dataflows that work for you.
+Parallel execution of nodes is essential to speed up overall graph operation. LangGraph offers native support for parallel execution of nodes, which can significantly enhance the performance of graph-based workflows. This parallelization is achieved through fan-out and fan-in mechanisms, utilizing both standard edges and [conditional_edges](https://langchain-docs-v0-3.github.io/langgraph/reference/graphs.md#langgraph.graph.MessageGraph.add_conditional_edges). Below are some examples showing how to add create branching dataflows that work for you.
 
 ### Run graph nodes in parallel
 
-In this example, we fan out from `Node A` to `B and C` and then fan in to `D`. With our state, [we specify the reducer add operation](https://langchain-ai.github.io/langgraph/concepts/low_level.md#reducers). This will combine or accumulate values for the specific key in the State, rather than simply overwriting the existing value. For lists, this means concatenating the new list with the existing list. See the above section on [state reducers](#process-state-updates-with-reducers) for more detail on updating state with reducers.
+In this example, we fan out from `Node A` to `B and C` and then fan in to `D`. With our state, [we specify the reducer add operation](https://langchain-docs-v0-3.github.io/langgraph/concepts/low_level.md#reducers). This will combine or accumulate values for the specific key in the State, rather than simply overwriting the existing value. For lists, this means concatenating the new list with the existing list. See the above section on [state reducers](#process-state-updates-with-reducers) for more detail on updating state with reducers.
 
 :::python
 ```python
@@ -1907,7 +1907,7 @@ In the above example, nodes `"b"` and `"c"` are executed concurrently in the sam
 ### Conditional branching
 
 :::python
-If your fan-out should vary at runtime based on the state, you can use [add_conditional_edges](https://langchain-ai.github.io/langgraph/reference/graphs.md#langgraph.graph.StateGraph.add_conditional_edges) to select one or more paths using the graph state. See example below, where node `a` generates a state update that determines the following node.
+If your fan-out should vary at runtime based on the state, you can use [add_conditional_edges](https://langchain-docs-v0-3.github.io/langgraph/reference/graphs.md#langgraph.graph.StateGraph.add_conditional_edges) to select one or more paths using the graph state. See example below, where node `a` generates a state update that determines the following node.
 
 ```python
 import operator
@@ -1974,7 +1974,7 @@ Adding "C" to ['A']
 :::
 
 :::js
-If your fan-out should vary at runtime based on the state, you can use [addConditionalEdges](https://langchain-ai.github.io/langgraph/reference/graphs.md#langgraph.graph.StateGraph.addConditionalEdges) to select one or more paths using the graph state. See example below, where node `a` generates a state update that determines the following node.
+If your fan-out should vary at runtime based on the state, you can use [addConditionalEdges](https://langchain-docs-v0-3.github.io/langgraph/reference/graphs.md#langgraph.graph.StateGraph.addConditionalEdges) to select one or more paths using the graph state. See example below, where node `a` generates a state update that determines the following node.
 
 ```typescript
 import "@langchain/langgraph/zod";
@@ -2647,7 +2647,7 @@ To convert a `sync` implementation of the graph to an `async` implementation, yo
 2. Update the code inside to use `await` appropriately.
 3. Invoke the graph with `.ainvoke` or `.astream` as desired.
 
-Because many LangChain objects implement the [Runnable Protocol](https://python.langchain.com/docs/expression_language/interface/) which has `async` variants of all the `sync` methods it's typically fairly quick to upgrade a `sync` graph to an `async` graph.
+Because many LangChain objects implement the [Runnable Protocol](https://langchain-docs-v0-3.github.io/langchain/docs/expression_language/interface/) which has `async` variants of all the `sync` methods it's typically fairly quick to upgrade a `sync` graph to an `async` graph.
 
 See example below. To demonstrate async invocations of underlying LLMs, we will include a chat model:
 
@@ -3096,7 +3096,7 @@ If you are using tools that update state via `Command`, we recommend using prebu
 
 Here we demonstrate how to visualize the graphs you create.
 
-You can visualize any arbitrary [Graph](https://langchain-ai.github.io/langgraph/reference/graphs/), including [StateGraph](https://langchain-ai.github.io/langgraph/reference/graphs.md#langgraph.graph.state.StateGraph). 
+You can visualize any arbitrary [Graph](https://langchain-docs-v0-3.github.io/langgraph/reference/graphs/), including [StateGraph](https://langchain-docs-v0-3.github.io/langgraph/reference/graphs.md#langgraph.graph.state.StateGraph). 
 
 :::python
 Let's have some fun by drawing fractals :).

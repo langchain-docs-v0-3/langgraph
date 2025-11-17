@@ -12,7 +12,7 @@ Before you start this tutorial, ensure you have the following:
 
 :::python
 
-- An API key for the [Tavily Search Engine](https://python.langchain.com/docs/integrations/tools/tavily_search/).
+- An API key for the [Tavily Search Engine](https://langchain-docs-v0-3.github.io/langchain/docs/integrations/tools/tavily_search/).
 
 :::
 
@@ -25,7 +25,7 @@ Before you start this tutorial, ensure you have the following:
 ## 1. Install the search engine
 
 :::python
-Install the requirements to use the [Tavily Search Engine](https://python.langchain.com/docs/integrations/tools/tavily_search/):
+Install the requirements to use the [Tavily Search Engine](https://langchain-docs-v0-3.github.io/langchain/docs/integrations/tools/tavily_search/):
 
 ```bash
 pip install -U langchain-tavily
@@ -291,7 +291,7 @@ graph_builder.add_node("tools", tool_node)
 
 !!! note
 
-    If you do not want to build this yourself in the future, you can use LangGraph's prebuilt [ToolNode](https://langchain-ai.github.io/langgraph/reference/agents/#langgraph.prebuilt.tool_node.ToolNode).
+    If you do not want to build this yourself in the future, you can use LangGraph's prebuilt [ToolNode](https://langchain-docs-v0-3.github.io/langgraph/reference/agents/#langgraph.prebuilt.tool_node.ToolNode).
 
 :::
 
@@ -406,7 +406,7 @@ graph = graph_builder.compile()
 
 !!! note
 
-    You can replace this with the prebuilt [tools_condition](https://langchain-ai.github.io/langgraph/reference/prebuilt/#tools_condition) to be more concise.
+    You can replace this with the prebuilt [tools_condition](https://langchain-docs-v0-3.github.io/langgraph/reference/prebuilt/#tools_condition) to be more concise.
 
 :::
 
@@ -632,8 +632,8 @@ For ease of use, adjust your code to replace the following with LangGraph prebui
 
 :::python
 
-- `BasicToolNode` is replaced with the prebuilt [ToolNode](https://langchain-ai.github.io/langgraph/reference/prebuilt/#toolnode)
-- `route_tools` is replaced with the prebuilt [tools_condition](https://langchain-ai.github.io/langgraph/reference/prebuilt/#tools_condition)
+- `BasicToolNode` is replaced with the prebuilt [ToolNode](https://langchain-docs-v0-3.github.io/langgraph/reference/prebuilt/#toolnode)
+- `route_tools` is replaced with the prebuilt [tools_condition](https://langchain-docs-v0-3.github.io/langgraph/reference/prebuilt/#tools_condition)
 
 {% include-markdown "../../../snippets/chat_model_tabs.md" %}
 

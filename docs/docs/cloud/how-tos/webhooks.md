@@ -128,7 +128,7 @@ For example, if your server listens for webhook events at `https://my-server.app
 
 ## Webhook payload
 
-LangGraph Platform sends webhook notifications in the format of a [Run](../../concepts/assistants.md#execution). See the [API Reference](https://langchain-ai.github.io/langgraph/cloud/reference/api/api_ref.html#model/run) for details. The request payload includes run input, configuration, and other metadata in the `kwargs` field.
+LangGraph Platform sends webhook notifications in the format of a [Run](../../concepts/assistants.md#execution). See the [API Reference](https://langchain-docs-v0-3.github.io/langgraph/cloud/reference/api/api_ref.html#model/run) for details. The request payload includes run input, configuration, and other metadata in the `kwargs` field.
 
 ## Secure webhooks
 
@@ -154,7 +154,7 @@ As of `langgraph-api>=0.2.78`, developers can disable webhooks in the `langgraph
 
 This feature is primarily intended for self-hosted deployments, where platform administrators or developers may prefer to disable webhooks to simplify their security posture—especially if they are not configuring firewall rules or other network controls. Disabling webhooks helps prevent untrusted payloads from being sent to internal endpoints.
 
-For full configuration details, refer to the [configuration file reference](https://langchain-ai.github.io/langgraph/cloud/reference/cli/?h=disable_webhooks#configuration-file).
+For full configuration details, refer to the [configuration file reference](https://langchain-docs-v0-3.github.io/langgraph/cloud/reference/cli/?h=disable_webhooks#configuration-file).
 
 ## Test webhooks
 

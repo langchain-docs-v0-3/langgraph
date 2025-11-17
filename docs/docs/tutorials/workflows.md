@@ -19,7 +19,7 @@ When building agents and workflows, LangGraph offers a number of benefits includ
 ## Set up
 
 :::python
-You can use [any chat model](https://python.langchain.com/docs/integrations/chat/) that supports structured outputs and tool calling. Below, we show the process of installing the packages, setting API keys, and testing structured outputs / tool calling for Anthropic.
+You can use [any chat model](https://langchain-docs-v0-3.github.io/langchain/docs/integrations/chat/) that supports structured outputs and tool calling. Below, we show the process of installing the packages, setting API keys, and testing structured outputs / tool calling for Anthropic.
 
 ??? "Install dependencies"
 
@@ -549,7 +549,7 @@ With parallelization, LLMs work simultaneously on a task:
 
     **Documentation**
 
-    See our documentation on parallelization [here](https://langchain-ai.github.io/langgraph/how-tos/branching/).
+    See our documentation on parallelization [here](https://langchain-docs-v0-3.github.io/langgraph/how-tos/branching/).
 
     **LangChain Academy**
 
@@ -858,7 +858,7 @@ Routing classifies an input and directs it to a followup task. As noted in the A
 
     **Examples**
 
-    [Here](https://langchain-ai.github.io/langgraph/tutorials/rag/langgraph_adaptive_rag_local/) is RAG workflow that routes questions. See our video [here](https://www.youtube.com/watch?v=bq1Plo2RhYI).
+    [Here](https://langchain-docs-v0-3.github.io/langgraph/tutorials/rag/langgraph_adaptive_rag_local/) is RAG workflow that routes questions. See our video [here](https://www.youtube.com/watch?v=bq1Plo2RhYI).
     :::
 
     :::js
@@ -1134,7 +1134,7 @@ With orchestrator-worker, an orchestrator breaks down a task and delegates each 
 
     **Creating Workers in LangGraph**
 
-    Because orchestrator-worker workflows are common, LangGraph **has the `Send` API to support this**. It lets you dynamically create worker nodes and send each one a specific input. Each worker has its own state, and all worker outputs are written to a *shared state key* that is accessible to the orchestrator graph. This gives the orchestrator access to all worker output and allows it to synthesize them into a final output. As you can see below, we iterate over a list of sections and `Send` each to a worker node. See further documentation [here](https://langchain-ai.github.io/langgraph/how-tos/map-reduce/) and [here](https://langchain-ai.github.io/langgraph/concepts/low_level/#send).
+    Because orchestrator-worker workflows are common, LangGraph **has the `Send` API to support this**. It lets you dynamically create worker nodes and send each one a specific input. Each worker has its own state, and all worker outputs are written to a *shared state key* that is accessible to the orchestrator graph. This gives the orchestrator access to all worker output and allows it to synthesize them into a final output. As you can see below, we iterate over a list of sections and `Send` each to a worker node. See further documentation [here](https://langchain-docs-v0-3.github.io/langgraph/how-tos/map-reduce/) and [here](https://langchain-docs-v0-3.github.io/langgraph/concepts/low_level/#send).
 
     ```python
     from langgraph.types import Send
@@ -1274,7 +1274,7 @@ With orchestrator-worker, an orchestrator breaks down a task and delegates each 
 
     **Creating Workers in LangGraph**
 
-    Because orchestrator-worker workflows are common, LangGraph **has the `Send` API to support this**. It lets you dynamically create worker nodes and send each one a specific input. Each worker has its own state, and all worker outputs are written to a *shared state key* that is accessible to the orchestrator graph. This gives the orchestrator access to all worker output and allows it to synthesize them into a final output. As you can see below, we iterate over a list of sections and `Send` each to a worker node. See further documentation [here](https://langchain-ai.github.io/langgraph/how-tos/map-reduce/) and [here](https://langchain-ai.github.io/langgraph/concepts/low_level/#send).
+    Because orchestrator-worker workflows are common, LangGraph **has the `Send` API to support this**. It lets you dynamically create worker nodes and send each one a specific input. Each worker has its own state, and all worker outputs are written to a *shared state key* that is accessible to the orchestrator graph. This gives the orchestrator access to all worker output and allows it to synthesize them into a final output. As you can see below, we iterate over a list of sections and `Send` each to a worker node. See further documentation [here](https://langchain-docs-v0-3.github.io/langgraph/how-tos/map-reduce/) and [here](https://langchain-docs-v0-3.github.io/langgraph/concepts/low_level/#send).
 
     ```typescript
     import { withLangGraph } from "@langchain/langgraph/zod";
@@ -1609,7 +1609,7 @@ In the evaluator-optimizer workflow, one LLM call generates a response while ano
 
     [Here](https://github.com/langchain-ai/local-deep-researcher) is an assistant that uses evaluator-optimizer to improve a report. See our video [here](https://www.youtube.com/watch?v=XGuTzHoqlj8).
 
-    [Here](https://langchain-ai.github.io/langgraph/tutorials/rag/langgraph_adaptive_rag_local/) is a RAG workflow that grades answers for hallucinations or errors. See our video [here](https://www.youtube.com/watch?v=bq1Plo2RhYI).
+    [Here](https://langchain-docs-v0-3.github.io/langgraph/tutorials/rag/langgraph_adaptive_rag_local/) is a RAG workflow that grades answers for hallucinations or errors. See our video [here](https://www.youtube.com/watch?v=bq1Plo2RhYI).
     :::
 
     :::js
@@ -2199,7 +2199,7 @@ const llmWithTools = llm.bindTools(tools);
 :::python
 LangGraph also provides a **pre-built method** for creating an agent as defined above (using the @[`create_react_agent`][create_react_agent] function):
 
-https://langchain-ai.github.io/langgraph/how-tos/create-react-agent/
+https://langchain-docs-v0-3.github.io/langgraph/how-tos/create-react-agent/
 
 ```python
 from langgraph.prebuilt import create_react_agent

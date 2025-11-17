@@ -1,9 +1,9 @@
 # INVALID_CONCURRENT_GRAPH_UPDATE
 
-A LangGraph [`StateGraph`](https://langchain-ai.github.io/langgraph/reference/graphs/#langgraph.graph.state.StateGraph) received concurrent updates to its state from multiple nodes to a state property that doesn't
+A LangGraph [`StateGraph`](https://langchain-docs-v0-3.github.io/langgraph/reference/graphs/#langgraph.graph.state.StateGraph) received concurrent updates to its state from multiple nodes to a state property that doesn't
 support it.
 
-One way this can occur is if you are using a [fanout](https://langchain-ai.github.io/langgraph/how-tos/map-reduce/)
+One way this can occur is if you are using a [fanout](https://langchain-docs-v0-3.github.io/langgraph/how-tos/map-reduce/)
 or other parallel execution in your graph and you have defined a graph like this:
 
 :::python

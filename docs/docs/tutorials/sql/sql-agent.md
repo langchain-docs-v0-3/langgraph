@@ -18,7 +18,7 @@ At a high level, the agent will:
 
 ## 1. Setup
 
-Let's first install some dependencies. This tutorial uses SQL database and tool abstractions from [langchain-community](https://python.langchain.com/docs/concepts/architecture/#langchain-community). We will also require a LangChain [chat model](https://python.langchain.com/docs/concepts/chat_models/).
+Let's first install some dependencies. This tutorial uses SQL database and tool abstractions from [langchain-community](https://langchain-docs-v0-3.github.io/langchain/docs/concepts/architecture/#langchain-community). We will also require a LangChain [chat model](https://langchain-docs-v0-3.github.io/langchain/docs/concepts/chat_models/).
 
 ```python
 %%capture --no-stderr
@@ -30,7 +30,7 @@ Let's first install some dependencies. This tutorial uses SQL database and tool 
 
 ### Select a LLM
 
-First we [initialize our LLM](https://python.langchain.com/docs/how_to/chat_models_universal_init/). Any model supporting [tool-calling](https://python.langchain.com/docs/integrations/chat/#featured-providers) should work. We use OpenAI below.
+First we [initialize our LLM](https://langchain-docs-v0-3.github.io/langchain/docs/how_to/chat_models_universal_init/). Any model supporting [tool-calling](https://langchain-docs-v0-3.github.io/langchain/docs/integrations/chat/#featured-providers) should work. We use OpenAI below.
 
 ```python
 from langchain.chat_models import init_chat_model

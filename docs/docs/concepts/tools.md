@@ -3,7 +3,7 @@
 Many AI applications interact with users via natural language. However, some use cases require models to interface directly with external systems—such as APIs, databases, or file systems—using structured input. In these scenarios, [tool calling](../how-tos/tool-calling.md) enables models to generate requests that conform to a specified input schema.
 
 :::python
-**Tools** encapsulate a callable function and its input schema. These can be passed to compatible [chat models](https://python.langchain.com/docs/concepts/chat_models), allowing the model to decide whether to invoke a tool and with what arguments.
+**Tools** encapsulate a callable function and its input schema. These can be passed to compatible [chat models](https://langchain-docs-v0-3.github.io/langchain/docs/concepts/chat_models), allowing the model to decide whether to invoke a tool and with what arguments.
 :::
 
 :::js
@@ -82,7 +82,7 @@ See the [tool calling guide](../how-tos/tool-calling.md) for more details.
 LangChain provides prebuilt tool integrations for common external systems including APIs, databases, file systems, and web data.
 
 :::python
-Browse the [integrations directory](https://python.langchain.com/docs/integrations/tools/) for available tools.
+Browse the [integrations directory](https://langchain-docs-v0-3.github.io/langchain/docs/integrations/tools/) for available tools.
 :::
 
 :::js

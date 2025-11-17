@@ -13,7 +13,7 @@ You can create an application from a template using the LangGraph CLI.
 !!! info "Requirements"
 
     - Python >= 3.11
-    - [LangGraph CLI](https://langchain-ai.github.io/langgraph/cloud/reference/cli/): Requires langchain-cli[inmem] >= 0.1.58
+    - [LangGraph CLI](https://langchain-docs-v0-3.github.io/langgraph/cloud/reference/cli/): Requires langchain-cli[inmem] >= 0.1.58
 
 ## Install the LangGraph CLI
 

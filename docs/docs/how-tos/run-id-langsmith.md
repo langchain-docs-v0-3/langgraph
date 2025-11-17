@@ -20,7 +20,7 @@ To make it easier to identify and analyzed traces generated during graph invocat
 | tags        | `List[str]`         | Tags for this call and any sub-calls (e.g., a Chain calling an LLM). You can use these to filter calls.            |
 | metadata    | `Dict[str, Any]`    | Metadata for this call and any sub-calls (e.g., a Chain calling an LLM). Keys should be strings, values should be JSON-serializable. |
 
-LangGraph graphs implement the [LangChain Runnable Interface](https://python.langchain.com/api_reference/core/runnables/langchain_core.runnables.base.Runnable.html) and accept a second argument (`RunnableConfig`) in methods like `invoke`, `ainvoke`, `stream` etc.
+LangGraph graphs implement the [LangChain Runnable Interface](https://langchain-docs-v0-3.github.io/api_reference/core/runnables/langchain_core.runnables.base.Runnable.html) and accept a second argument (`RunnableConfig`) in methods like `invoke`, `ainvoke`, `stream` etc.
 
 The LangSmith platform will allow you to search and filter traces based on `run_name`, `run_id`, `tags` and `metadata`.
 
@@ -65,7 +65,7 @@ _set_env("LANGSMITH_API_KEY")
 
 ## Define the graph
 
-For this example we will use the [prebuilt ReAct agent](https://langchain-ai.github.io/langgraph/how-tos/create-react-agent/).
+For this example we will use the [prebuilt ReAct agent](https://langchain-docs-v0-3.github.io/langgraph/how-tos/create-react-agent/).
 
 ```python
 from langchain_openai import ChatOpenAI

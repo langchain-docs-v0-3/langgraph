@@ -13,7 +13,7 @@ You can use a prebuilt chat UI for interacting with any LangGraph agent through 
 
 ## Run agent in UI
 
-First, set up LangGraph API server [locally](../tutorials/langgraph-platform/local-server.md) or deploy your agent on [LangGraph Platform](https://langchain-ai.github.io/langgraph/cloud/quick_start/).
+First, set up LangGraph API server [locally](../tutorials/langgraph-platform/local-server.md) or deploy your agent on [LangGraph Platform](https://langchain-docs-v0-3.github.io/langgraph/cloud/quick_start/).
 
 Then, navigate to [Agent Chat UI](https://agentchat.vercel.app), or clone the repository and [run the dev server locally](https://github.com/langchain-ai/agent-chat-ui?tab=readme-ov-file#setup):
 
@@ -37,4 +37,4 @@ Agent Chat UI has full support for [human-in-the-loop](../concepts/human_in_the_
 
 You can also use generative UI in the Agent Chat UI.
 
-Generative UI allows you to define [React](https://react.dev/) components, and push them to the UI from the LangGraph server. For more documentation on building generative UI LangGraph agents, read [these docs](https://langchain-ai.github.io/langgraph/cloud/how-tos/generative_ui_react/).
+Generative UI allows you to define [React](https://react.dev/) components, and push them to the UI from the LangGraph server. For more documentation on building generative UI LangGraph agents, read [these docs](https://langchain-docs-v0-3.github.io/langgraph/cloud/how-tos/generative_ui_react/).

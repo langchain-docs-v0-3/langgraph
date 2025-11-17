@@ -162,7 +162,7 @@ To find numbers between 10 and 30 in the Fibonacci sequence, we can generate the
 ...
 ```
 
-Since we're leveraging LangGraph's [persistence](https://langchain-ai.github.io/langgraph/concepts/persistence/) features we can now continue the conversation using the same thread ID -- LangGraph will automatically pass previous history to the AutoGen agent:
+Since we're leveraging LangGraph's [persistence](https://langchain-docs-v0-3.github.io/langgraph/concepts/persistence/) features we can now continue the conversation using the same thread ID -- LangGraph will automatically pass previous history to the AutoGen agent:
 
 ```python
 for chunk in graph.stream(

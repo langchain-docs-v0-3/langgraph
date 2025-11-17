@@ -3280,7 +3280,7 @@ Callback that is called when a LangChain event is received.
 
 ##### See
 
-https://langchain-ai.github.io/langgraph/cloud/how-tos/stream_events/#stream-graph-in-events-mode for more details.
+https://langchain-docs-v0-3.github.io/langgraph/cloud/how-tos/stream_events/#stream-graph-in-events-mode for more details.
 
 ***
 

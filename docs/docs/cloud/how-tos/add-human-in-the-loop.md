@@ -173,7 +173,7 @@ To review, edit, and approve tool calls in an agent or workflow, use LangGraph's
     3. Once resumed, the return value of `interrupt(...)` is the human-provided input, which is used to update the state.
 
     Once you have a running LangGraph API server, you can interact with it using
-    [LangGraph SDK](https://langchain-ai.github.io/langgraph/cloud/reference/sdk/python_sdk_ref/)
+    [LangGraph SDK](https://langchain-docs-v0-3.github.io/langgraph/cloud/reference/sdk/python_sdk_ref/)
 
     === "Python"
 

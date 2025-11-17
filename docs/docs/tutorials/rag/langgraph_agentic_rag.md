@@ -1,6 +1,6 @@
 # Agentic RAG
 
-In this tutorial we will build a [retrieval agent](https://python.langchain.com/docs/tutorials/qa_chat_history). Retrieval agents are useful when you want an LLM to make a decision about whether to retrieve context from a vectorstore or respond to the user directly.
+In this tutorial we will build a [retrieval agent](https://langchain-docs-v0-3.github.io/langchain/docs/tutorials/qa_chat_history). Retrieval agents are useful when you want an LLM to make a decision about whether to retrieve context from a vectorstore or respond to the user directly.
 
 By the end of the tutorial we will have done the following:
 
@@ -112,7 +112,7 @@ Now that we have our split documents, we can index them into a vector store that
 Now we will start building components ([nodes](../../concepts/low_level.md#nodes) and [edges](../../concepts/low_level.md#edges)) for our agentic RAG graph.
 
 :::python
-Note that the components will operate on the [`MessagesState`](../../concepts/low_level.md#messagesstate) — graph state that contains a `messages` key with a list of [chat messages](https://python.langchain.com/docs/concepts/messages/).
+Note that the components will operate on the [`MessagesState`](../../concepts/low_level.md#messagesstate) — graph state that contains a `messages` key with a list of [chat messages](https://langchain-docs-v0-3.github.io/langchain/docs/concepts/messages/).
 :::
 
 :::js

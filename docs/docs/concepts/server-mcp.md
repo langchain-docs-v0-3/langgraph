@@ -129,7 +129,7 @@ graph = builder.compile()
 print(graph.invoke({"question": "hi"}))
 ```
 
-For more details, see the [low-level concepts guide](https://langchain-ai.github.io/langgraph/concepts/low_level/#state).
+For more details, see the [low-level concepts guide](https://langchain-docs-v0-3.github.io/langgraph/concepts/low_level/#state).
 
 ## Usage overview
 

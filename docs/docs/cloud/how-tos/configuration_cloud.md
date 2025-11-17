@@ -51,7 +51,7 @@ For more information on runtime context, [see here](../../concepts/low_level.md#
 
 ### LangGraph SDK
 
-To create an assistant, use the [LangGraph SDK](../../concepts/sdk.md) `create` method. See the [Python](https://langchain-ai.github.io/langgraph/cloud/reference/sdk/python_sdk_ref/#langgraph_sdk.client.AssistantsClient.create) and [JS](https://langchain-ai.github.io/langgraph/cloud/reference/sdk/js_ts_sdk_ref/#create) SDK reference docs for more information.
+To create an assistant, use the [LangGraph SDK](../../concepts/sdk.md) `create` method. See the [Python](https://langchain-docs-v0-3.github.io/langgraph/cloud/reference/sdk/python_sdk_ref/#langgraph_sdk.client.AssistantsClient.create) and [JS](https://langchain-docs-v0-3.github.io/langgraph/cloud/reference/sdk/js_ts_sdk_ref/#create) SDK reference docs for more information.
 
 This example uses the same configuration schema as above, and creates an assistant with `model_name` set to `openai`.
 
@@ -231,7 +231,7 @@ Inside your deployment, select the "Assistants" tab. For the assistant you would
 
 ### LangGraph SDK
 
-To edit the assistant, use the `update` method. This will create a new version of the assistant with the provided edits. See the [Python](https://langchain-ai.github.io/langgraph/cloud/reference/sdk/python_sdk_ref/#langgraph_sdk.client.AssistantsClient.update) and [JS](https://langchain-ai.github.io/langgraph/cloud/reference/sdk/js_ts_sdk_ref/#update) SDK reference docs for more information.
+To edit the assistant, use the `update` method. This will create a new version of the assistant with the provided edits. See the [Python](https://langchain-docs-v0-3.github.io/langgraph/cloud/reference/sdk/python_sdk_ref/#langgraph_sdk.client.AssistantsClient.update) and [JS](https://langchain-docs-v0-3.github.io/langgraph/cloud/reference/sdk/js_ts_sdk_ref/#update) SDK reference docs for more information.
 
 !!! note "Note"
 

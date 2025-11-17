@@ -1753,7 +1753,7 @@ const model = new ChatOpenAI({
 In Python versions < 3.11, [asyncio tasks](https://docs.python.org/3/library/asyncio-task.html#asyncio.create_task) do not support the `context` parameter.  
 This limits LangGraph ability to automatically propagate context, and affects LangGraph's streaming mechanisms in two key ways:
 
-1. You **must** explicitly pass [`RunnableConfig`](https://python.langchain.com/docs/concepts/runnables/#runnableconfig) into async LLM calls (e.g., `ainvoke()`), as callbacks are not automatically propagated.
+1. You **must** explicitly pass [`RunnableConfig`](https://langchain-docs-v0-3.github.io/langchain/docs/concepts/runnables/#runnableconfig) into async LLM calls (e.g., `ainvoke()`), as callbacks are not automatically propagated.
 2. You **cannot** use `get_stream_writer()` in async nodes or tools — you must pass a `writer` argument directly.
 
 ??? example "Extended example: async LLM call with manual config"

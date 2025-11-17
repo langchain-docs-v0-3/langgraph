@@ -29,7 +29,7 @@ Structured outputs with LLMs work by providing a specific format or schema that 
 2. Output parsers: Using post-processing to extract structured data from LLM responses.
 3. Tool calling: Leveraging built-in tool calling capabilities of some LLMs to generate structured outputs.
 
-Structured outputs are crucial for routing as they ensure the LLM's decision can be reliably interpreted and acted upon by the system. Learn more about [structured outputs in this how-to guide](https://python.langchain.com/docs/how_to/structured_output/).
+Structured outputs are crucial for routing as they ensure the LLM's decision can be reliably interpreted and acted upon by the system. Learn more about [structured outputs in this how-to guide](https://langchain-docs-v0-3.github.io/langchain/docs/how_to/structured_output/).
 
 ## Tool-calling agent
 
@@ -52,7 +52,7 @@ In LangGraph, you can use the prebuilt [agent](../agents/agents.md#2-create-an-a
 
 Tools are useful whenever you want an agent to interact with external systems. External systems (e.g., APIs) often require a particular input schema or payload, rather than natural language. When we bind an API, for example, as a tool, we give the model awareness of the required input schema. The model will choose to call a tool based upon the natural language input from the user and it will return an output that adheres to the tool's required schema. 
 
-[Many LLM providers support tool calling](https://python.langchain.com/docs/integrations/chat/) and [tool calling interface](https://blog.langchain.dev/improving-core-tool-interfaces-and-docs-in-langchain/) in LangChain is simple: you can simply pass any Python `function` into `ChatModel.bind_tools(function)`.
+[Many LLM providers support tool calling](https://langchain-docs-v0-3.github.io/langchain/docs/integrations/chat/) and [tool calling interface](https://blog.langchain.dev/improving-core-tool-interfaces-and-docs-in-langchain/) in LangChain is simple: you can simply pass any Python `function` into `ChatModel.bind_tools(function)`.
 
 ![Tools](img/tool_call.png)
 

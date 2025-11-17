@@ -29,7 +29,7 @@ pip install -U langgraph "langchain[anthropic]"
 
 !!! info
 
-    `langchain[anthropic]` is installed so the agent can call the [model](https://python.langchain.com/docs/integrations/chat/).
+    `langchain[anthropic]` is installed so the agent can call the [model](https://langchain-docs-v0-3.github.io/langchain/docs/integrations/chat/).
 
 :::
 
@@ -119,7 +119,7 @@ await agent.invoke({
 ## 3. Configure an LLM
 
 :::python
-To configure an LLM with specific parameters, such as temperature, use [init_chat_model](https://python.langchain.com/api_reference/langchain/chat_models/langchain.chat_models.base.init_chat_model.html):
+To configure an LLM with specific parameters, such as temperature, use [init_chat_model](https://langchain-docs-v0-3.github.io/api_reference/langchain/chat_models/langchain.chat_models.base.init_chat_model.html):
 
 ```python
 from langchain.chat_models import init_chat_model

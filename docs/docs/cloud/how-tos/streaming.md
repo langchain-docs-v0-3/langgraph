@@ -1,6 +1,6 @@
 # Streaming API
 
-[LangGraph SDK](https://langchain-ai.github.io/langgraph/cloud/reference/sdk/python_sdk_ref/) allows you to [stream outputs](../../concepts/streaming.md) from the LangGraph API server.
+[LangGraph SDK](https://langchain-docs-v0-3.github.io/langgraph/cloud/reference/sdk/python_sdk_ref/) allows you to [stream outputs](../../concepts/streaming.md) from the LangGraph API server.
 
 !!! note
 
@@ -119,7 +119,7 @@ Basic usage example:
     ```
 
     Once you have a running LangGraph API server, you can interact with it using
-    [LangGraph SDK](https://langchain-ai.github.io/langgraph/cloud/reference/sdk/python_sdk_ref/)
+    [LangGraph SDK](https://langchain-docs-v0-3.github.io/langgraph/cloud/reference/sdk/python_sdk_ref/)
 
     === "Python"
 
@@ -505,7 +505,7 @@ for chunk in client.runs.stream(
     ```
 
     Once you have a running LangGraph API server, you can interact with it using
-    [LangGraph SDK](https://langchain-ai.github.io/langgraph/cloud/reference/sdk/python_sdk_ref/)
+    [LangGraph SDK](https://langchain-docs-v0-3.github.io/langgraph/cloud/reference/sdk/python_sdk_ref/)
 
     === "Python"
 
@@ -900,7 +900,7 @@ If you don't want to **persist the outputs** of a streaming run in the [checkpoi
 
 ## Join and stream
 
-LangGraph Platform allows you to join an active [background run](../how-tos/background_run.md) and stream outputs from it. To do so, you can use [LangGraph SDK's](https://langchain-ai.github.io/langgraph/cloud/reference/sdk/python_sdk_ref/) `client.runs.join_stream` method:
+LangGraph Platform allows you to join an active [background run](../how-tos/background_run.md) and stream outputs from it. To do so, you can use [LangGraph SDK's](https://langchain-docs-v0-3.github.io/langgraph/cloud/reference/sdk/python_sdk_ref/) `client.runs.join_stream` method:
 
 === "Python"
 

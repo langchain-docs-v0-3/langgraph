@@ -850,7 +850,7 @@ It can be helpful to indicate which agent a particular AI message is from, espec
 ### Representing handoffs in message history
 
 :::python
-Handoffs are typically done via the LLM calling a dedicated [handoff tool](#handoffs-as-tools). This is represented as an [AI message](https://python.langchain.com/docs/concepts/messages/#aimessage) with tool calls that is passed to the next agent (LLM). Most LLM providers don't support receiving AI messages with tool calls **without** corresponding tool messages.
+Handoffs are typically done via the LLM calling a dedicated [handoff tool](#handoffs-as-tools). This is represented as an [AI message](https://langchain-docs-v0-3.github.io/langchain/docs/concepts/messages/#aimessage) with tool calls that is passed to the next agent (LLM). Most LLM providers don't support receiving AI messages with tool calls **without** corresponding tool messages.
 :::
 
 :::js
@@ -861,7 +861,7 @@ You therefore have two options:
 
 :::python
 
-1. Add an extra [tool message](https://python.langchain.com/docs/concepts/messages/#toolmessage) to the message list, e.g., "Successfully transferred to agent X"
+1. Add an extra [tool message](https://langchain-docs-v0-3.github.io/langchain/docs/concepts/messages/#toolmessage) to the message list, e.g., "Successfully transferred to agent X"
 2. Remove the AI message with the tool calls
    :::
 

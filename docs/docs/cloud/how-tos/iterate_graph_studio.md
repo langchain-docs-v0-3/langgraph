@@ -14,7 +14,7 @@ Studio allows you to edit prompts used inside individual nodes, directly from th
 
 ### Graph Configuration
 
-Define your [configuration](https://langchain-ai.github.io/langgraph/how-tos/configuration/) to specify prompt fields and their associated nodes using `langgraph_nodes` and `langgraph_type` keys.
+Define your [configuration](https://langchain-docs-v0-3.github.io/langgraph/how-tos/configuration/) to specify prompt fields and their associated nodes using `langgraph_nodes` and `langgraph_type` keys.
 
 #### Configuration Reference
 

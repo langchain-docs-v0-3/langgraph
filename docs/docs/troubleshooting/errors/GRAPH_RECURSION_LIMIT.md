@@ -1,6 +1,6 @@
 # GRAPH_RECURSION_LIMIT
 
-Your LangGraph [`StateGraph`](https://langchain-ai.github.io/langgraph/reference/graphs/#langgraph.graph.state.StateGraph) reached the maximum number of steps before hitting a stop condition.
+Your LangGraph [`StateGraph`](https://langchain-docs-v0-3.github.io/langgraph/reference/graphs/#langgraph.graph.state.StateGraph) reached the maximum number of steps before hitting a stop condition.
 This is often due to an infinite loop caused by code like the example below:
 
 :::python

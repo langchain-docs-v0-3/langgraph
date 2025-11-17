@@ -1,7 +1,7 @@
 # INVALID_GRAPH_NODE_RETURN_VALUE
 
 :::python
-A LangGraph [`StateGraph`](https://langchain-ai.github.io/langgraph/reference/graphs/#langgraph.graph.state.StateGraph)
+A LangGraph [`StateGraph`](https://langchain-docs-v0-3.github.io/langgraph/reference/graphs/#langgraph.graph.state.StateGraph)
 received a non-dict return type from a node. Here's an example:
 
 ```python
@@ -27,14 +27,14 @@ graph.invoke({ "some_key": "someval" });
 
 ```
 InvalidUpdateError: Expected dict, got ['whoops']
-For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/INVALID_GRAPH_NODE_RETURN_VALUE
+For troubleshooting, visit: https://langchain-docs-v0-3.github.io/langchain/docs/troubleshooting/errors/INVALID_GRAPH_NODE_RETURN_VALUE
 ```
 
 Nodes in your graph must return a dict containing one or more keys defined in your state.
 :::
 
 :::js
-A LangGraph [`StateGraph`](https://langchain-ai.github.io/langgraph/reference/graphs/#langgraph.graph.state.StateGraph)
+A LangGraph [`StateGraph`](https://langchain-docs-v0-3.github.io/langgraph/reference/graphs/#langgraph.graph.state.StateGraph)
 received a non-object return type from a node. Here's an example:
 
 ```typescript
