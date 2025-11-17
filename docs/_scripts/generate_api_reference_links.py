@@ -12,8 +12,8 @@ from typing_extensions import TypedDict
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 # Base URL for all class documentation
-_LANGCHAIN_API_REFERENCE = "https://python.langchain.com/api_reference/"
-_LANGGRAPH_API_REFERENCE = "https://langchain-ai.github.io/langgraph/reference/"
+_LANGCHAIN_API_REFERENCE = "https://langchain-docs-v0-3.github.io/api_reference/"
+_LANGGRAPH_API_REFERENCE = "https://langchain-docs-v0-3.github.io/langgraph/reference/"
 
 
 # (alias/re-exported modules, source module, class, docs namespace)

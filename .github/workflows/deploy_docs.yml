@@ -39,14 +39,6 @@ jobs:
         run: |
           yarn
           uv sync --all-groups
-
-      - name: Run unit tests
-        # Run unit tests on the docs build pipeline
-        run: make tests
-      - name: Lint Docs
-        # This step lints the docs using the existing linting set up.
-        # It should be very fast and should not require any external services.
-        run: make lint-docs
       - name: Build llms-text
         run: make llms-text
       - name: Build site

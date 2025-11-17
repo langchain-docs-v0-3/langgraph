@@ -29,7 +29,11 @@ logger = logging.getLogger(__name__)
 
 
 def _transform_link(
-    link_name: str, scope: str, file_path: str, line_number: int, custom_title: Optional[str] = None
+    link_name: str,
+    scope: str,
+    file_path: str,
+    line_number: int,
+    custom_title: Optional[str] = None,
 ) -> Optional[str]:
     """Transform a cross-reference link based on the current scope.
 
@@ -46,10 +50,10 @@ def _transform_link(
 
     Example:
         >>> _transform_link("StateGraph", "python", "file.md", 5)
-        "[StateGraph](https://langchain-ai.github.io/langgraph/reference/graphs/#langgraph.graph.StateGraph)"
+        "[StateGraph](https://langchain-docs-v0-3.github.io/langgraph/reference/graphs/#langgraph.graph.StateGraph)"
 
         >>> _transform_link("StateGraph", "python", "file.md", 5, "Custom Title")
-        "[Custom Title](https://langchain-ai.github.io/langgraph/reference/graphs/#langgraph.graph.StateGraph)"
+        "[Custom Title](https://langchain-docs-v0-3.github.io/langgraph/reference/graphs/#langgraph.graph.StateGraph)"
 
         >>> _transform_link("unknown-link", "python", "file.md", 5)
         None
@@ -117,7 +121,9 @@ CROSS_REFERENCE_PATTERN = re.compile(
 )
 
 
-def _replace_autolinks(markdown: str, file_path: str, *, default_scope: str = "python") -> str:
+def _replace_autolinks(
+    markdown: str, file_path: str, *, default_scope: str = "python"
+) -> str:
     """Preprocess markdown lines to handle @[links] with conditional fence scopes.
 
     This function processes markdown content to transform @[link_name] references
@@ -169,7 +175,7 @@ def _replace_autolinks(markdown: str, file_path: str, *, default_scope: str = "p
                 # This is @[ref] format
                 link_name = match.group("link_name")
                 custom_title = None
-            
+
             transformed = _transform_link(
                 link_name, current_scope, file_path, line_number, custom_title
             )

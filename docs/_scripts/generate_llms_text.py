@@ -4,7 +4,7 @@ import asyncio
 import glob
 import os
 import re
-from typing import TypedDict, List, Optional
+from typing import List, Optional, TypedDict
 
 import yaml
 from langchain.chat_models import init_chat_model
@@ -260,7 +260,7 @@ async def generate_nav_links_text(
                 url = url.removesuffix(".md")
                 url = url.removesuffix(".ipynb")
                 url = url.rstrip("/") + "/"
-                url = f"https://langchain-ai.github.io/langgraph/{url}"
+                url = f"https://langchain-docs-v0-3.github.io/langgraph/{url}"
 
             f.write(f"- [{title}]({url}): {item['description']}\n")
 

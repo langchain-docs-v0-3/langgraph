@@ -106,7 +106,7 @@ JS_LINK_MAP = {
 }
 
 # TODO: Allow updating these to localhost for local development
-PY_REFERENCE_HOST = "https://langchain-ai.github.io/langgraph/"
+PY_REFERENCE_HOST = "https://langchain-docs-v0-3.github.io/langgraph/"
 JS_REFERENCE_HOST = "https://langchain-ai.github.io/langgraphjs/"
 
 for key, value in PYTHON_LINK_MAP.items():
